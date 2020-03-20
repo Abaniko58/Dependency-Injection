@@ -4,12 +4,12 @@ namespace DesignPatterns\Structural\DependencyInjection;
 
 class DatabaseConfiguration
 {
-    private string $host;
-    private int $port;
-    private string $username;
-    private string $password;
+    private $host;
+    private $port;
+    private $username;
+    private $password;
 
-    public function __construct(string $host, int $port, string $username, string $password)
+    public function __construct($host, $port, $username, $password)
     {
         $this->host = $host;
         $this->port = $port;

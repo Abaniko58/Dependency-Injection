@@ -1,0 +1,5 @@
+#FROM phpstorm/php-71-apache-xdebug-26
+FROM phpstorm/php-73-apache-xdebug-27
+#ADD php.ini /usr/local/etc/php
+#/php.ini
+#RUN echo "ServerName lh" >> /etc/apache2/apache2.conf

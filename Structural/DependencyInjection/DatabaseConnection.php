@@ -4,7 +4,7 @@ namespace DesignPatterns\Structural\DependencyInjection;
 
 class DatabaseConnection
 {
-    private DatabaseConfiguration $configuration;
+    private $configuration;
 
     public function __construct(DatabaseConfiguration $config)
     {
@@ -16,7 +16,7 @@ class DatabaseConnection
         // this is just for the sake of demonstration, not a real DSN
         // notice that only the injected config is used here, so there is
         // a real separation of concerns here
-
+//        return echo ($this->configuration->getUsername());
         return sprintf(
             '%s:%s@%s:%d',
             $this->configuration->getUsername(),
@@ -24,5 +24,6 @@ class DatabaseConnection
             $this->configuration->getHost(),
             $this->configuration->getPort()
         );
+
     }
 }
