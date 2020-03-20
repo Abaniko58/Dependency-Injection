@@ -4,7 +4,7 @@ namespace DesignPatterns\Structural\DependencyInjection;
 
 class DatabaseConnection
 {
-    private $configuration;
+    private $configuration;   //так верно
 
     public function __construct(DatabaseConfiguration $config)
     {
@@ -23,7 +23,7 @@ class DatabaseConnection
             $this->configuration->getPassword(),
             $this->configuration->getHost(),
             $this->configuration->getPort()
-        );
+        );    // Эта функция форматирует но на печать не выводит
 
     }
 }
